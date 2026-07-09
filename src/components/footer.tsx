@@ -13,8 +13,8 @@ export function Footer() {
           <div>
             <Logo />
             <p className="mt-4 max-w-xs text-sm text-muted">
-              {site.tagline} — gentle, modern dentistry for the whole family in
-              the heart of Chepauk, Chennai.
+              Gentle, modern dentistry for the whole family in the heart of
+              Chepauk, Chennai.
             </p>
             <p className="mt-4 text-sm font-medium text-ink">
               {site.doctor.name}, {site.doctor.qualification}

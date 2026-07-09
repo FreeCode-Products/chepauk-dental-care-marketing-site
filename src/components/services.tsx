@@ -82,7 +82,6 @@ export function Services() {
                   <h3 className="mt-6 font-display text-xl font-bold text-ink">
                     {s.title}
                   </h3>
-                  <p className="mt-0.5 text-sm text-brand-500">{s.tamil}</p>
                   <p className="mt-2 text-muted">{s.desc}</p>
                   <a
                     href="#book"

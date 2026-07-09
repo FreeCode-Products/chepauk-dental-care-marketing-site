@@ -16,7 +16,6 @@ const shots: Shot[] = [
   { src: "/clinic-chair.jpeg", caption: "Modern, fully-equipped treatment room" },
   { src: "/clinic-sterilization.jpeg", caption: "Strict sterilisation & digital imaging" },
   { src: "/clinic-consultation.jpeg", caption: "Comfortable consultation space" },
-  { src: "/flyer-doctor.jpeg", caption: "Led by Dr. C. Narmadha, BDS MDS" },
 ];
 
 export function Gallery() {

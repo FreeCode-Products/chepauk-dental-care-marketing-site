@@ -30,12 +30,11 @@ export const metadata: Metadata = {
     "clear aligners Chennai",
     "Chepauk Dental Care",
   ],
-  icons: { icon: "/logo.jpeg", apple: "/logo.jpeg" },
   openGraph: {
     title: "Chepauk Dental Care — Dentist in Chepauk, Chennai",
     description:
       "Modern, painless dentistry by Dr. C. Narmadha (BDS, MDS). Book your appointment on WhatsApp.",
-    images: ["/flyer-services.jpeg"],
+    images: ["/clinic-signboard.jpeg"],
     type: "website",
   },
 };

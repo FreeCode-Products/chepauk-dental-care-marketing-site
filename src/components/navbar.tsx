@@ -86,7 +86,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.25 }}
-            className="glass absolute inset-x-4 top-20 rounded-3xl p-5 shadow-[var(--shadow-soft)] md:hidden"
+            className="absolute inset-x-4 top-20 rounded-3xl border border-brand-100 bg-white p-5 shadow-[var(--shadow-soft)] md:hidden"
           >
             <ul className="flex flex-col gap-1">
               {links.map((l) => (
