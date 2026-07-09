@@ -17,6 +17,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://chepauck-dental-care.vercel.app"),
   title: "Chepauk Dental Care — Dr. C. Narmadha | Dentist in Chepauk, Chennai",
   description:
     "Gentle, modern dental care in Chepauk, Chennai by Dr. C. Narmadha (BDS, MDS). Implants, root canal, braces, clear aligners, crowns, kids dentistry & more. Book on WhatsApp.",
@@ -29,10 +30,12 @@ export const metadata: Metadata = {
     "clear aligners Chennai",
     "Chepauk Dental Care",
   ],
+  icons: { icon: "/logo.jpeg", apple: "/logo.jpeg" },
   openGraph: {
     title: "Chepauk Dental Care — Dentist in Chepauk, Chennai",
     description:
       "Modern, painless dentistry by Dr. C. Narmadha (BDS, MDS). Book your appointment on WhatsApp.",
+    images: ["/flyer-services.jpeg"],
     type: "website",
   },
 };
