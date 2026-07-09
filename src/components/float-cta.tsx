@@ -31,11 +31,11 @@ export function FloatCTA() {
           exit={{ opacity: 0, scale: 0.6, y: 20 }}
           whileHover={{ scale: 1.06 }}
           whileTap={{ scale: 0.94 }}
-          className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3.5 font-semibold text-white shadow-[0_16px_40px_-12px_rgba(37,211,102,0.6)]"
+          className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] font-semibold text-white shadow-[0_16px_40px_-12px_rgba(37,211,102,0.7)] sm:h-auto sm:w-auto sm:gap-2 sm:px-5 sm:py-3.5"
           aria-label="Book on WhatsApp"
         >
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#25D366] opacity-25" />
-          <WhatsAppIcon className="relative h-6 w-6" />
+          <span className="pointer-events-none absolute inline-flex h-full w-full animate-ping rounded-full bg-[#25D366] opacity-20" />
+          <WhatsAppIcon className="relative h-7 w-7 sm:h-6 sm:w-6" />
           <span className="relative hidden sm:inline">Book on WhatsApp</span>
         </motion.a>
       )}
