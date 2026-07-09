@@ -36,8 +36,10 @@ export function Navbar() {
     >
       <nav
         className={cn(
-          "flex w-full max-w-6xl items-center justify-between rounded-full px-4 py-2.5 transition-all duration-500",
-          scrolled ? "glass shadow-[var(--shadow-soft)]" : "bg-transparent"
+          "flex w-full max-w-6xl items-center justify-between rounded-full px-3 py-2 transition-all duration-500 sm:px-4 sm:py-2.5",
+          scrolled
+            ? "glass shadow-[var(--shadow-soft)]"
+            : "border border-white/60 bg-white/70 shadow-[var(--shadow-soft)] backdrop-blur md:border-transparent md:bg-transparent md:shadow-none md:backdrop-blur-none"
         )}
       >
         <Logo />
@@ -70,13 +72,19 @@ export function Navbar() {
           </Button>
         </div>
 
-        <button
-          onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-full text-ink md:hidden"
-          aria-label="Toggle menu"
-        >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <Button href="#book" className="px-4 py-2 text-xs">
+            <CalendarCheck className="h-4 w-4" />
+            Book
+          </Button>
+          <button
+            onClick={() => setOpen((v) => !v)}
+            className="flex h-10 w-10 items-center justify-center rounded-full text-ink"
+            aria-label="Toggle menu"
+          >
+            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </nav>
 
       <AnimatePresence>

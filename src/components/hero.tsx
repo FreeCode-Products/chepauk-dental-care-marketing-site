@@ -1,14 +1,9 @@
 "use client";
 
 import { motion } from "motion/react";
-import {
-  CalendarCheck,
-  Clock,
-  MapPin,
-  MessageCircle,
-  ShieldCheck,
-} from "lucide-react";
+import { CalendarCheck, Clock, MapPin, ShieldCheck } from "lucide-react";
 import { LogoMark } from "@/components/logo";
+import { WhatsAppIcon } from "@/components/whatsapp-icon";
 import { Button } from "@/components/ui/button";
 import { buildWhatsAppLink, site } from "@/lib/site";
 
@@ -93,7 +88,7 @@ export function Hero() {
         variant="outline"
         className="w-full sm:w-auto"
       >
-        <MessageCircle className="h-4 w-4" />
+        <WhatsAppIcon className="h-4 w-4" />
         WhatsApp Us
       </Button>
     </motion.div>
@@ -120,6 +115,29 @@ export function Hero() {
         Mon–Sat · 10 AM – 8 PM
       </span>
     </motion.div>
+  );
+
+  const quickBadges = (
+    <div className="grid grid-cols-2 gap-3 lg:hidden">
+      <div className="flex items-center gap-3 rounded-2xl bg-white p-3 shadow-[var(--shadow-soft)]">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-600 text-white">
+          <ShieldCheck className="h-5 w-5" />
+        </span>
+        <div className="min-w-0">
+          <p className="text-sm font-semibold text-ink">Painless</p>
+          <p className="truncate text-xs text-muted">Comfort-first care</p>
+        </div>
+      </div>
+      <div className="flex items-center gap-3 rounded-2xl bg-white p-3 shadow-[var(--shadow-soft)]">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-500 text-white">
+          <CalendarCheck className="h-5 w-5" />
+        </span>
+        <div className="min-w-0">
+          <p className="text-sm font-semibold text-ink">Same-day</p>
+          <p className="truncate text-xs text-muted">Appointments</p>
+        </div>
+      </div>
+    </div>
   );
 
   const card = (
@@ -176,7 +194,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden pb-12 pt-28 lg:flex lg:min-h-screen lg:items-center lg:pb-0"
+      className="relative overflow-hidden pb-12 pt-32 lg:flex lg:min-h-screen lg:items-center lg:pb-0 lg:pt-28"
     >
       {/* Animated background */}
       <div className="pointer-events-none absolute inset-0 -z-10">
@@ -193,9 +211,10 @@ export function Hero() {
         />
       </div>
 
-      {/* Mobile: image → address/timing → button → paragraph → heading → badge */}
+      {/* Mobile: image → painless/same-day → address/timing → button → paragraph → heading → badge */}
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 lg:hidden">
         {card}
+        {quickBadges}
         {chips}
         {actions}
         {paragraph}
