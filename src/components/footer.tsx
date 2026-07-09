@@ -7,7 +7,7 @@ import { buildWhatsAppLink, services, site } from "@/lib/site";
 export function Footer() {
   return (
     <footer className="mt-8 border-t border-brand-100 bg-white">
-      <div className="mx-auto max-w-6xl px-4 py-16">
+      <div className="mx-auto max-w-6xl px-4 pt-16 pb-28 sm:pb-24">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.4fr_1fr_1.2fr]">
           {/* Brand */}
           <div>
