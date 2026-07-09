@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/*  Theme tokens — Chepauk Dental Care (brand blue)                    */
+/* ------------------------------------------------------------------ */
+@theme {
+  --color-background: #f4f8fd;
+  --color-foreground: #0d2748;
+
+  --color-cream: #f4f8fd;
+  --color-ink: #0d2748;
+  --color-muted: #5a6b83;
+
+  /* Brand blue ramp — from clinic logo */
+  --color-brand-50: #f2f8fe;
+  --color-brand-100: #e2eefb;
+  --color-brand-200: #c3ddf6;
+  --color-brand-300: #93c6ef;
+  --color-brand-400: #5aa9e6;
+  --color-brand-500: #2b8fd6;
+  --color-brand-600: #1f66b8;
+  --color-brand-700: #1b4f96;
+  --color-brand-800: #143a6b;
+  --color-brand-900: #0d2748;
+
+  /* Accent — fresh sky highlight */
+  --color-sky-400: #38bdf8;
+  --color-sky-500: #0ea5e9;
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-poppins);
+
+  --shadow-glow: 0 20px 60px -20px rgba(31, 102, 184, 0.5);
+  --shadow-soft: 0 12px 40px -12px rgba(13, 39, 72, 0.18);
+
+  --radius-4xl: 2rem;
+}
+
+/* Base ---------------------------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+::selection {
+  background: var(--color-brand-300);
+  color: var(--color-brand-900);
+}
+
+/* Utilities ----------------------------------------------------------*/
+@utility text-gradient {
+  background: linear-gradient(
+    100deg,
+    var(--color-brand-700),
+    var(--color-brand-500) 55%,
+    var(--color-sky-400)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Keyframe animations ------------------------------------------------*/
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+@keyframes blob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -40px) scale(1.1);
+  }
+  66% {
+    transform: translate(-25px, 25px) scale(0.95);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-float {
+  animation: float 7s ease-in-out infinite;
+}
+.animate-blob {
+  animation: blob 18s ease-in-out infinite;
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-blob,
+  .animate-marquee {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
