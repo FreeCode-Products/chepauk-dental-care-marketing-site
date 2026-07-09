@@ -1,9 +1,16 @@
 "use client";
 
 import { AnimatePresence, motion, useScroll, useMotionValueEvent } from "motion/react";
-import { MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { buildWhatsAppLink, site } from "@/lib/site";
+
+function WhatsAppIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 32 32" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M16.003 3C9.383 3 4 8.383 4 15c0 2.117.553 4.184 1.605 6.01L4 29l8.184-1.57A11.93 11.93 0 0016.003 27C22.62 27 28 21.617 28 15S22.62 3 16.003 3zm0 21.82c-1.86 0-3.68-.5-5.27-1.44l-.377-.223-4.855.93.93-4.73-.246-.388A9.8 9.8 0 016.18 15c0-5.42 4.41-9.82 9.824-9.82 5.415 0 9.82 4.4 9.82 9.82 0 5.42-4.405 9.82-9.82 9.82zm5.39-7.35c-.295-.148-1.746-.86-2.017-.96-.27-.098-.467-.148-.664.15-.196.295-.76.958-.933 1.155-.172.196-.344.22-.638.073-.295-.148-1.246-.46-2.373-1.463-.877-.783-1.47-1.75-1.642-2.045-.172-.295-.018-.454.13-.6.134-.132.295-.344.443-.516.148-.172.196-.295.295-.492.098-.196.05-.368-.025-.516-.074-.148-.664-1.6-.91-2.19-.24-.576-.483-.498-.664-.508l-.566-.01c-.196 0-.516.074-.786.37-.27.295-1.032 1.008-1.032 2.46 0 1.45 1.056 2.85 1.203 3.047.148.196 2.08 3.176 5.04 4.453.704.304 1.253.486 1.68.622.706.224 1.35.192 1.858.116.567-.084 1.746-.713 1.993-1.402.246-.688.246-1.278.172-1.402-.073-.123-.27-.196-.565-.344z" />
+    </svg>
+  );
+}
 
 export function FloatCTA() {
   const [show, setShow] = useState(false);
@@ -24,11 +31,11 @@ export function FloatCTA() {
           exit={{ opacity: 0, scale: 0.6, y: 20 }}
           whileHover={{ scale: 1.06 }}
           whileTap={{ scale: 0.94 }}
-          className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-brand-600 px-5 py-3.5 font-semibold text-white shadow-[var(--shadow-glow)]"
+          className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3.5 font-semibold text-white shadow-[0_16px_40px_-12px_rgba(37,211,102,0.6)]"
           aria-label="Book on WhatsApp"
         >
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-500 opacity-30" />
-          <MessageCircle className="relative h-5 w-5" />
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#25D366] opacity-25" />
+          <WhatsAppIcon className="relative h-6 w-6" />
           <span className="relative hidden sm:inline">Book on WhatsApp</span>
         </motion.a>
       )}
