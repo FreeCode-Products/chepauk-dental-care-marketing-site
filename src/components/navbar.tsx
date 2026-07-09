@@ -36,7 +36,7 @@ export function Navbar() {
     >
       <nav
         className={cn(
-          "flex w-full max-w-6xl items-center justify-between rounded-full px-3 py-2 transition-all duration-500 sm:px-4 sm:py-2.5",
+          "relative flex w-full max-w-6xl items-center justify-between rounded-full px-3 py-2 transition-all duration-500 sm:px-4 sm:py-2.5",
           scrolled
             ? "glass shadow-[var(--shadow-soft)]"
             : "border border-white/60 bg-white/70 shadow-[var(--shadow-soft)] backdrop-blur md:border-transparent md:bg-transparent md:shadow-none md:backdrop-blur-none"
@@ -44,7 +44,7 @@ export function Navbar() {
       >
         <Logo />
 
-        <ul className="hidden items-center gap-1 md:flex">
+        <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 md:flex">
           {links.map((l) => (
             <li key={l.href}>
               <a

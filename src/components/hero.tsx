@@ -105,12 +105,12 @@ export function Hero() {
         href={site.mapsUrl}
         target="_blank"
         rel="noreferrer"
-        className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-medium text-ink shadow-[var(--shadow-soft)]"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-medium text-ink shadow-[var(--shadow-soft)] sm:w-auto sm:justify-start"
       >
         <MapPin className="h-4 w-4 shrink-0 text-brand-600" />
         {site.address.line}
       </a>
-      <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-medium text-ink shadow-[var(--shadow-soft)]">
+      <span className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-medium text-ink shadow-[var(--shadow-soft)] sm:w-auto sm:justify-start">
         <Clock className="h-4 w-4 shrink-0 text-brand-600" />
         Mon–Sat · 10 AM – 8 PM
       </span>
